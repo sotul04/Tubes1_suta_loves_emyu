@@ -38,7 +38,7 @@ $o_i=\sum_{k=1}^n distance(o_i,o_k)$ , dengan $n =$ jumlah diamond pada board
 
 $p_i =$ poin diamond ke- $i$
 
-Kemudian dari setiap 
+Kemudian akan dilakukan pemilihan diamond dengan nilai terkecil. Diamond dengan nilai terkecil memiliki beberapa sifat, yaitu paling dekat dengan bot, relatif dekat dengan diamond-diamond lain di board, relatif dekat dengan base, dan memiliki poin yang lebih besar. Solusi greedy yang kami pilih tidak memperhitungkan keberadaan bot lainnya. Hal ini terjadi karena setelah diuji coba dengan memperhitungkan keberadaan bot lain, jumlah skor rata-rata yang diperoleh bot relatif rendah dibandingkan bot yang mengabaikan keberadaan bot lainnya.
 
 ### Requirements
 
