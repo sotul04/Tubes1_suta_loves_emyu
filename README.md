@@ -29,10 +29,15 @@ $$ value_i = {d_i^2o_ib_i \over {p_i+3}} $$
 dengan:
 
 $i =$ diamond ke- $i$ pada list obyek
+
 $d_i =$ jarak bot ke diamond
+
 $b_i =$ jarak diamond ke- $i$ ke base
+
 $o_i=\sum_{k=1}^n distance(o_i,o_k)$ , dengan $n =$ jumlah diamond pada board
+
 $p_i =$ poin diamond ke- $i$
+
 Kemudian dari setiap 
 
 ### Requirements
