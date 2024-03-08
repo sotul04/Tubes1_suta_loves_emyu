@@ -1,28 +1,32 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# 💎 Etimo Diamonds 2
+# Tugas Besar Strategi Algoritma
 
-Diamonds is a programming challenge. Program a bot and compete to get the highest score. For more information:
+## Kelompok 14 : suta_loves_emyu
 
--   [Project Specification](https://docs.google.com/document/d/13cbmMVXviyu8eKQ6heqgDzt4JNNMeAZO/edit)
+<br>
+<p align="center">
+<img src="loves_madrid.png" alt="Kelompok suta_loves_emyu" width="400"/>
+</p>
+<br>
+
+|   NIM    |              Nama                   |
+| :------: |    :---------------------------:    |
+| 13522054 |         Benjamin Sihombing          |
+| 13522098 |     Suthasoma Mahardhika Munthe     |
+| 13522110 |      Marvin Scifo Y. Hutahaean      |
+
+## 💎 Etimo Diamonds 2
+
+Diamonds adalah sebuah *programming challenge*. Permainan ini meminta programmer untuk membuat bot yang dapat memperoleh skor tertinggi. 
+
+### Requirements
+
+Bot dan Game Engine dimuat terpisah. Bagian ini adalah *bot starter* yang akan digunakan untuk memberikan instruksi pergerakan bot saat permainan. 
+Silahkan ikuti instruksi di bawah ini untuk menyiapkan *dependencies* yang diperlukan.
 -   [Get Started with Diamonds](https://docs.google.com/document/d/1L92Axb89yIkom0b24D350Z1QAr8rujvHof7-kXRAp7c/edit)
 
-## Installing Dependencies 🔨
-
-1. Clone this repository and move to the root of this project's directory
-
-    ```
-    git clone https://github.com/haziqam/tubes1-IF2110-bot-starter-pack.git
-    cd ./tubes1-IF2110-bot-starter-pack
-    ```
-
-2. Install dependencies
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-## How to Run 💻
+### How to Run 💻
 
 1. To run one bot
 
@@ -55,11 +59,3 @@ Diamonds is a programming challenge. Program a bot and compete to get the highes
 -   If you run multiple bots, make sure each emails and names are unique
 -   The email could be anything as long as it follows a correct email syntax
 -   The name, and password could be anything without any space
-
-## Credits 🪙
-
-This repository is adapted from https://github.com/Etimo/diamonds2
-
-Some code in this repository is adjusted to fix some issues in the original repository and to adapt to the requirements of Algorithm Strategies course (IF2211), Informatics Undergraduate Program, ITB.
-
-©️ All rights and credits reserved to [Etimo](https://github.com/Etimo)
