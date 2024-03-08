@@ -28,7 +28,7 @@ $$ value_i = {d^2o_ib \over {p_i+3}} $$
 
 dengan:
 
-$i =$ diamond ke-$i$ pada list obyek
+$i =$ diamond ke- $i$ pada list obyek
 
 $d =$ jarak bot ke diamond 
 
