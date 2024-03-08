@@ -13,7 +13,7 @@ def getStep2Way(currPos, destPos : Position) -> (int,int):
     y_distance = abs(currPos.y - destPos.y)
     return x_distance, y_distance
 
-class RangapLogic(BaseLogic):
+class MachineBot(BaseLogic):
     def __init__(self):
         self.directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         self.goal_position: Optional[Position] = None
@@ -88,7 +88,6 @@ class RangapLogic(BaseLogic):
         found = False
         for i in self.listOfTeleport:
             if self.isEqualPosition(nextPos, i.position):
-                print("CRASH!!..",i.type, i.position)
                 found = True
                 break
         return found
@@ -102,11 +101,6 @@ class RangapLogic(BaseLogic):
         else :
             xmove, ymove = self.getDirection(destPos, 1)
         if self.checkNextMoveCrash(xmove, ymove) :
-            print("Obstacle exists")
-            print(f"CurrentPos:",currPos)
-            print(f"Past move: {xmove}, {ymove}")
-            for i in self.listOfTeleport:
-                print(i.position, i.type)
             currx = currPos.x
             curry = currPos.y
             destx = destPos.x
@@ -180,7 +174,8 @@ class RangapLogic(BaseLogic):
                 valueOfi = self.getDiamondPriorityValue(evaluateD[i][0], evaluateD[i][1], evaluateD[i][2], evaluateD[i][3])
                 if (valueOfi < getDiamond[1] and evaluateD[i][3]+self.bot.properties.diamonds <= self.bot.properties.inventory_size):
                     getDiamond = (evaluateD[i], valueOfi)
-            print(getDiamond)
+            if countDiamonds == 1 and getDiamond[0][3]+self.bot.properties.diamonds > self.bot.properties.inventory_size:
+                return None
             diamondPick = getDiamond[0][0]
             return diamondPick
         return None
@@ -199,9 +194,6 @@ class RangapLogic(BaseLogic):
 
         self.board_width = board.width
         self.board_height = board.height
-
-        print(board_bot.properties.diamonds)
-        print(board_bot.properties.score)
 
         self.redButton = None
         
@@ -222,9 +214,7 @@ class RangapLogic(BaseLogic):
 
         # Start evaluate the next move
         to_base = self.getDistanceToBase()
-        if time_left <= to_base:
-            print("Distance:",to_base)
-            print("Time left:", time_left)
+        if time_left <= to_base + 1:
             if self.bot.properties.diamonds != 0:
                 
                 if (not self.isEqualPosition(self.bot.position, self.bot.properties.base)):
@@ -239,7 +229,6 @@ class RangapLogic(BaseLogic):
                     return self.getRandomMove()
 
             else:
-
                 priorityDiamond = self.pickDiamond()
 
                 if (priorityDiamond != None) and self.isInAreaMove(self.bot.properties.base, priorityDiamond):
@@ -265,6 +254,9 @@ class RangapLogic(BaseLogic):
 
                     return self.getSaveDirection(diamondPick)
                 else:
+                    if (not self.isEqualPosition(self.bot.position, self.bot.properties.base)):
+                        return self.getSaveDirection(board_bot.properties.base)
+
                     return self.getRandomMove()
             else:
                 return self.getSaveDirection(board_bot.properties.base)
