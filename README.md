@@ -20,6 +20,20 @@
 
 Diamonds adalah sebuah *programming challenge*. Permainan ini meminta programmer untuk membuat bot yang dapat memperoleh skor tertinggi. 
 
+### Algoritma Greedy 
+
+Bot yang diimplementasikan memakai strategi greedy dengan formula yang menghitung nilai sebuah tujuan pilihan terhadap beberapa aspek, yaitu jarak dari bot ke diamond ($d$), jarak total diamond ke diamond lain ($o$), jarak diamond ke base ($b$), dan poin diamond ($p$). Nilai setiap diamond ($value$) akan dihitung berdasarkan formula di bawah ini.
+
+$$ value_i = {d^2o_ib \over {p_i+3}} $$
+
+dengan:
+$ i = $ diamond ke-$i$ pada list obyek
+$ d = $ jarak bot ke diamond 
+$ o_i = \sum_{k=1}^n distance(o_i,o_k) $ , dengan $n =$ jumlah diamond pada board
+$ p_i = $ poin diamond ke-$i$
+
+Kemudian dari setiap 
+
 ### Requirements
 
 Bot dan Game Engine dimuat terpisah. Bagian ini adalah *bot starter* yang akan digunakan untuk memberikan instruksi pergerakan bot saat permainan. 

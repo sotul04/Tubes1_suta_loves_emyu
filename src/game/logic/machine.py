@@ -52,8 +52,6 @@ class MachineBot(BaseLogic):
             point = self.listOfDiamonds[i].properties.points
             temp_eval = [self.listOfDiamonds[i].position,dist,0,point]
             for j in range (countDiamonds):
-                if (i == j):
-                    continue
                 temp_eval[2] += self.stepDistance(self.listOfDiamonds[i],self.listOfDiamonds[j])
             evaluation.append(temp_eval)
         return evaluation
@@ -77,7 +75,7 @@ class MachineBot(BaseLogic):
         posBase = self.bot.properties.base
         value = self.getDistance(posDiamond, posBase)
         value = distance*distance * relativeDistance * value
-        value = value/(point+2)
+        value = value/(point+3)
         return value
         
     def checkNextMoveCrash(self, xmove : int, ymove: int) -> bool :
