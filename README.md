@@ -48,6 +48,10 @@ Silahkan ikuti instruksi di bawah ini untuk menyiapkan *dependencies* yang diper
 
 ### How to Run 💻
 
+Sebelum menjalankan bot, pastikan bahwa *game engine* yang diperlukan pada bagian [Get Started with Diamonds](#requirements) telah disiapkan dan dijalankan.
+
+Selanjutnya pindah direktori ke folder ```src``` dengan command ```cd src```. Lanjutkan dengan mengikuti instruksi di bawah ini.
+
 1. Command yang dipakai untuk menjalankan bot
 
     ```
