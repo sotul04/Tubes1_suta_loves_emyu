@@ -48,27 +48,27 @@ Silahkan ikuti instruksi di bawah ini untuk menyiapkan *dependencies* yang diper
 
 ### How to Run 💻
 
-1. To run one bot
+1. Command yang dipakai untuk menjalankan bot
 
     ```
     python main.py --logic Random --email=your_email@example.com --name=your_name --password=your_password --team etimo
     ```
 
-2. To run multiple bots simultaneously
+2. Jalankan command di bawah ini untuk menjalankan beberapa bot sekaligus
 
-    For Windows
+    Windows
 
     ```
     ./run-bots.bat
     ```
 
-    For Linux / (possibly) macOS
+    Linux / (possibly) macOS
 
     ```
     ./run-bots.sh
     ```
 
-    <b>Before executing the script, make sure to change the permission of the shell script to enable executing the script (for linux/macOS)</b>
+    <b>Sebelum menjalankan script, ingat untuk mengubah izin script shell agar dapat menjalankan script (linux/macOS)</b>
 
     ```
     chmod +x run-bots.sh
@@ -76,6 +76,6 @@ Silahkan ikuti instruksi di bawah ini untuk menyiapkan *dependencies* yang diper
 
 #### Note:
 
--   If you run multiple bots, make sure each emails and names are unique
--   The email could be anything as long as it follows a correct email syntax
--   The name, and password could be anything without any space
+-   Jika beberapa bot dijalankan bersamaan, pastikan email dan nama unik
+-   Email dapat berupa apapun asalkan masih sesuai dengan sintaks email yang benar
+-   Nama dan password bot dibebaskan dan tanpa spasi
